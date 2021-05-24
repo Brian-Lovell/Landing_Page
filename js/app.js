@@ -12,7 +12,7 @@
  * JS Standard: ESlint
  * 
 */
-
+console.log("Javascript file loaded")
 /**
  * Define Global Variables
  * 
