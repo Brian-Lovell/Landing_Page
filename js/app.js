@@ -12,12 +12,13 @@
  * JS Standard: ESlint
  * 
 */
-console.log("Javascript file loaded")
+console.log("Javascript file loaded");
 /**
  * Define Global Variables
  * 
 */
-
+const sectionList = document.querySelectorAll("section");
+console.log(sectionList)
 
 /**
  * End Global Variables
