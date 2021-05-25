@@ -20,6 +20,9 @@ console.log("Javascript file loaded");
 const sectionList = document.querySelectorAll("section");
 console.log(sectionList);
 
+let navbarList = document.querySelector("navbar__list");
+console.log(navbarList);
+
 /**
  * End Global Variables
  * Start Helper Functions
