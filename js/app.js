@@ -20,7 +20,7 @@ console.log("Javascript file loaded");
 const sectionList = document.querySelectorAll("section");
 console.log(sectionList);
 
-let navbarList = document.querySelector("navbar__list");
+let navbarList = document.getElementById("navbar__list");
 console.log(navbarList);
 
 /**
@@ -38,6 +38,10 @@ console.log(navbarList);
 */
 
 // build the nav
+for (let i = 0; i < sectionList.length; i++) {
+    console.log(sectionList);
+}
+
 
 
 // Add class 'active' to section when near top of viewport
