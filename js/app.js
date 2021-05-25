@@ -18,7 +18,7 @@ console.log("Javascript file loaded");
  * 
 */
 const sectionList = document.querySelectorAll("section");
-console.log(sectionList)
+console.log(sectionList);
 
 /**
  * End Global Variables
