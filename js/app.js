@@ -17,6 +17,9 @@ console.log("Javascript file loaded");
  * Define Global Variables
  * 
 */
+const sectionList = document.querySelectorAll('section');
+console.log(sectionList);
+
 const landingContainer = document.getElementsByClassName('landing__container')[1];
 console.log(landingContainer);
 
@@ -41,7 +44,10 @@ console.log(headersText);
 */
 
 // build the nav
-
+for (i = 0; i < sectionList.length; i++) {
+    console.log("For loop test")
+    
+}
 
 
 
