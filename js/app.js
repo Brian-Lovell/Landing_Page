@@ -17,11 +17,14 @@ console.log("Javascript file loaded");
  * Define Global Variables
  * 
 */
-const sectionList = document.querySelectorAll("section");
-console.log(sectionList);
+const landingContainer = document.getElementsByClassName('landing__container')[1];
+console.log(landingContainer);
 
-let navbarList = document.getElementById("navbar__list");
-console.log(navbarList);
+const headers = landingContainer.getElementsByTagName('h2')[0];
+console.log(headers);
+
+const headersText = headers.innerHTML;
+console.log(headersText);
 
 /**
  * End Global Variables
@@ -38,9 +41,7 @@ console.log(navbarList);
 */
 
 // build the nav
-for (let i = 0; i < sectionList.length; i++) {
-    console.log(sectionList);
-}
+
 
 
 
