@@ -20,15 +20,6 @@ console.log("Javascript file loaded");
 const sectionList = document.querySelectorAll('section');
 console.log(sectionList);
 
-const landingContainer = document.getElementsByClassName('landing__container')[1];
-console.log(landingContainer);
-
-const headers = landingContainer.getElementsByTagName('h2')[0];
-console.log(headers);
-
-const headersText = headers.innerHTML;
-console.log(headersText);
-
 /**
  * End Global Variables
  * Start Helper Functions
@@ -46,7 +37,13 @@ console.log(headersText);
 // build the nav
 for (i = 0; i < sectionList.length; i++) {
     console.log("For loop test")
-    
+    const landingContainer = document.getElementsByClassName('landing__container')[i];
+    console.log(landingContainer);
+    const headers = landingContainer.getElementsByTagName('h2')[0];
+    console.log(headers);
+    const headersText = headers.innerHTML;
+    console.log(headersText);
+
 }
 
 
