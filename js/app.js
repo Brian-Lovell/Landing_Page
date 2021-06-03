@@ -25,7 +25,20 @@ console.log(sectionList);
  * Start Helper Functions
  * 
 */
+function addNav (text) {
+    let newNavLi = document.createElement("li");
 
+    let navContent = document.createTextNode(text);
+
+    newNavLi.appendChild(navContent);
+
+    let navbarMenu = document.getElementById("navbar__list").parentNode;
+
+    let navbarList = document.getElementById("navbar__list");
+
+    navbarMenu.insertBefore(newNavLi, navbarList);
+
+}
 
 
 /**
@@ -37,12 +50,23 @@ console.log(sectionList);
 // build the nav
 for (i = 0; i < sectionList.length; i++) {
     console.log("For loop test")
+
+    const navbarMenu = document.getElementsByClassName("navbar__menu")[0];
+    console.log(navbarMenu.outerHTML);
+
+    const navbarList = navbarMenu.getElementsByTagName("ul");
+    console.log(navbarList.outerHTML);
+
     const landingContainer = document.getElementsByClassName('landing__container')[i];
     console.log(landingContainer);
+
     const headers = landingContainer.getElementsByTagName('h2')[0];
     console.log(headers);
+ 
     const headersText = headers.innerHTML;
     console.log(headersText);
+
+    addNav (headersText);
 
 }
 
