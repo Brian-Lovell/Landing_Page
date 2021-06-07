@@ -52,7 +52,6 @@ function addNav (text) {
 
 function buildNav () {
     for (i = 0; i < sectionList.length; i++) {
-        console.log("For loop test")
 
         const landingContainer = document.getElementsByClassName('landing__container')[i];
         console.log(landingContainer);
