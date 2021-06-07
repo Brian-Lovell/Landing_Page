@@ -26,20 +26,12 @@ console.log(sectionList);
  * 
 */
 function addNav (text) {
-
     let navbarList = document.getElementById("navbar__list");
-
     let newNavLi = document.createElement("li");
-
     let navContent = document.createTextNode(text);
 
     newNavLi.appendChild(navContent);
-
     navbarList.appendChild(newNavLi, navbarList);
-
-    // let navbarMenu = document.getElementById("navbar__list").parentNode;
-
-    // let navbarList = document.getElementById("navbar__list").nextSibling;
 
 }
 
