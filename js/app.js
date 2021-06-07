@@ -33,7 +33,7 @@ function addNav (text) {
     let navContent = document.createTextNode(text);
 
     newNavLi.classList.add("menu__link");
-    newNavLi.appendChild(navContent);
+    newNavA.appendChild(navContent);
     navbarList.appendChild(newNavLi, navbarList);
     console.log(newNavLi);
 
