@@ -53,16 +53,14 @@ function addNav (text,id) {
 function buildNav () {
     // Get elements from section list
     for (i = 0; i < sectionList.length; i++) {
-        // Go through each section and retreive the name of the header
+        // Go through each section and get header
         const landingContainer = document.getElementsByClassName('landing__container')[i];
         const headers = landingContainer.getElementsByTagName('h2')[0];
-        // Store header information in variable
+        // Store header
         const headersText = headers.innerHTML;
-
         // Get section id 
         const sectionId = document.getElementsByTagName("section")[i].id;
-        console.log(sectionId);
-        // Passes the header text to create menu items in nav
+        // Passes section id and header text
         addNav (headersText,sectionId);
 
     }
@@ -73,6 +71,8 @@ buildNav();
 
 
 // Add class 'active' to section when near top of viewport
+
+
 
 
 // Scroll to anchor ID using scrollTO event
