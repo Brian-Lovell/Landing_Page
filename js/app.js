@@ -45,21 +45,26 @@ function addNav (text) {
 */
 
 // build the nav
-for (i = 0; i < sectionList.length; i++) {
-    console.log("For loop test")
 
-    const landingContainer = document.getElementsByClassName('landing__container')[i];
-    console.log(landingContainer);
+function buildNav () {
+    for (i = 0; i < sectionList.length; i++) {
+        console.log("For loop test")
 
-    const headers = landingContainer.getElementsByTagName('h2')[0];
-    console.log(headers);
+        const landingContainer = document.getElementsByClassName('landing__container')[i];
+        console.log(landingContainer);
+
+        const headers = landingContainer.getElementsByTagName('h2')[0];
+        console.log(headers);
  
-    const headersText = headers.innerHTML;
-    console.log(headersText);
+        const headersText = headers.innerHTML;
+        console.log(headersText);
 
-    addNav (headersText);
+        addNav (headersText);
 
+    }
 }
+
+buildNav();
 
 
 
