@@ -41,7 +41,6 @@ function addNav (text,id) {
 
 }
 
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -74,13 +73,13 @@ buildNav();
 
 
 
-
 // Scroll to anchor ID using scrollTO event
 
 
 /**
  * End Main Functions
  * Begin Events
+
  * 
 */
 
