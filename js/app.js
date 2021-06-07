@@ -25,7 +25,7 @@ console.log(sectionList);
  * Start Helper Functions
  * 
 */
-function addNav (text) {
+function addNav (text,id) {
     // Create Elements and retreive the navbar_list element
     let navbarList = document.getElementById("navbar__list");
     let newNavLi = document.createElement("li");
@@ -33,10 +33,11 @@ function addNav (text) {
     let navContent = document.createTextNode(text);
 
     // Add the elements and add class names
-    newNavLi.classList.add("menu__link");
+    newNavA.classList.add("menu__link");
     newNavA.appendChild(navContent);
     navbarList.appendChild(newNavLi, navbarList);
     newNavLi.appendChild(newNavA);
+    newNavA.setAttribute("href","#" + id);
 
 }
 
@@ -62,7 +63,7 @@ function buildNav () {
         const sectionId = document.getElementsByTagName("section")[i].id;
         console.log(sectionId);
         // Passes the header text to create menu items in nav
-        addNav (headersText);
+        addNav (headersText,sectionId);
 
     }
 }
