@@ -27,13 +27,17 @@ console.log(sectionList);
 */
 function addNav (text) {
     let navbarList = document.getElementById("navbar__list");
+
     let newNavLi = document.createElement("li");
+    let newNavA = document.createElement("a");
     let navContent = document.createTextNode(text);
 
     newNavLi.classList.add("menu__link");
-
     newNavLi.appendChild(navContent);
     navbarList.appendChild(newNavLi, navbarList);
+    console.log(newNavLi);
+
+    newNavLi.appendChild(newNavA);
 
 }
 
