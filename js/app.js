@@ -18,7 +18,6 @@ console.log("Javascript file loaded");
  * 
 */
 const sectionList = document.querySelectorAll('section');
-console.log(sectionList);
 
 /**
  * End Global Variables
@@ -26,17 +25,16 @@ console.log(sectionList);
  * 
 */
 function addNav (text) {
+    // Create Elements and retreive the navbar_list element
     let navbarList = document.getElementById("navbar__list");
-
     let newNavLi = document.createElement("li");
     let newNavA = document.createElement("a");
     let navContent = document.createTextNode(text);
 
+    // Add the elements and add class names
     newNavLi.classList.add("menu__link");
     newNavA.appendChild(navContent);
     navbarList.appendChild(newNavLi, navbarList);
-    console.log(newNavLi);
-
     newNavLi.appendChild(newNavA);
 
 }
@@ -52,16 +50,9 @@ function addNav (text) {
 
 function buildNav () {
     for (i = 0; i < sectionList.length; i++) {
-
         const landingContainer = document.getElementsByClassName('landing__container')[i];
-        console.log(landingContainer);
-
         const headers = landingContainer.getElementsByTagName('h2')[0];
-        console.log(headers);
- 
         const headersText = headers.innerHTML;
-        console.log(headersText);
-
         addNav (headersText);
 
     }
