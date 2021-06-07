@@ -18,6 +18,7 @@ console.log("Javascript file loaded");
  * 
 */
 const sectionList = document.querySelectorAll('section');
+console.log(sectionList);
 
 /**
  * End Global Variables
@@ -49,10 +50,18 @@ function addNav (text) {
 // build the nav
 
 function buildNav () {
+    // Get elements from section list
     for (i = 0; i < sectionList.length; i++) {
+        // Go through each section and retreive the name of the header
         const landingContainer = document.getElementsByClassName('landing__container')[i];
         const headers = landingContainer.getElementsByTagName('h2')[0];
+        // Store header information in variable
         const headersText = headers.innerHTML;
+
+        // Get section id 
+        const sectionId = document.getElementsByTagName("section")[i].id;
+        console.log(sectionId);
+        // Passes the header text to create menu items in nav
         addNav (headersText);
 
     }
