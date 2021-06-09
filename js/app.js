@@ -41,20 +41,18 @@ function addMenu (text,idstring) {
     navbarList.appendChild(newNavLi, navbarList);
     newNavLi.appendChild(newNavA);
     newNavA.setAttribute("href","#" + idstring);
+
+    // Add event listener and scroll behavior
     newNavA.addEventListener("click", (e) => {
         e.preventDefault();
         sectionId = document.getElementById(idstring);
         console.log(sectionId);
-        let xPos = sectionId.getBoundingClientRect().left;
-        let yPos = sectionId.getBoundingClientRect().top;
-        console.log(xPos);
+        let yPos = sectionId.getBoundingClientRect().top + window.pageYOffset;
         console.log(yPos);
         let scrollOptions = {
-            left: xPos,
             top: yPos,
             behavior: 'smooth',
         };
-
         window.scrollTo(scrollOptions);
     });
 
@@ -92,28 +90,7 @@ buildNav();
 
 // Add class 'active' to section when near top of viewport
 
-
-
-// function smoothScroll (idstring) {
-//     console.log("I have been clicked now run you function!");
-//     sectionId = document.getElementById(idstring);
-//     console.log(sectionId)
-//     const xPos = sectionId.getBoundingClientRect().x;
-//     const yPos = sectionId.getBoundingClientRect().y;
-//     console.log(xPos);
-//     console.log(yPos);
-
-//     window.scrollTo(xPos,yPos)
-//     window.scrollTo()
-// }
-
-
-
-
-
-
 // Scroll to anchor ID using scrollTO event
-
 
 /**
  * End Main Functions
