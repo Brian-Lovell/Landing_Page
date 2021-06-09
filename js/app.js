@@ -20,14 +20,17 @@ console.log("Javascript file loaded");
 const sectionList = document.querySelectorAll('section');
 console.log(sectionList);
 
+let navbarList = document.getElementById("navbar__list");
+console.log(navbarList);
+
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
-function addNav (text,id) {
+function addMenu (text,idstring) {
     // Create Elements and retreive the navbar_list element
-    let navbarList = document.getElementById("navbar__list");
+    // let navbarList = document.getElementById("navbar__list");
     let newNavLi = document.createElement("li");
     let newNavA = document.createElement("a");
     let navContent = document.createTextNode(text);
@@ -37,7 +40,25 @@ function addNav (text,id) {
     newNavA.appendChild(navContent);
     navbarList.appendChild(newNavLi, navbarList);
     newNavLi.appendChild(newNavA);
-    newNavA.setAttribute("href","#" + id);
+    newNavA.setAttribute("href","#" + idstring);
+    newNavA.addEventListener("click", (e) => {
+        e.preventDefault();
+        sectionId = document.getElementById(idstring);
+        console.log(sectionId);
+        let xPos = sectionId.getBoundingClientRect().left;
+        let yPos = sectionId.getBoundingClientRect().top;
+        console.log(xPos);
+        console.log(yPos);
+        let scrollOptions = {
+            left: xPos,
+            top: yPos,
+            behavior: 'smooth',
+        };
+
+        window.scrollTo(scrollOptions);
+    });
+
+   
 
 }
 
@@ -60,7 +81,7 @@ function buildNav () {
         // Get section id 
         const sectionId = document.getElementsByTagName("section")[i].id;
         // Passes section id and header text
-        addNav (headersText,sectionId);
+        addMenu (headersText,sectionId);
 
     }
 }
@@ -70,6 +91,24 @@ buildNav();
 
 
 // Add class 'active' to section when near top of viewport
+
+
+
+// function smoothScroll (idstring) {
+//     console.log("I have been clicked now run you function!");
+//     sectionId = document.getElementById(idstring);
+//     console.log(sectionId)
+//     const xPos = sectionId.getBoundingClientRect().x;
+//     const yPos = sectionId.getBoundingClientRect().y;
+//     console.log(xPos);
+//     console.log(yPos);
+
+//     window.scrollTo(xPos,yPos)
+//     window.scrollTo()
+// }
+
+
+
 
 
 
