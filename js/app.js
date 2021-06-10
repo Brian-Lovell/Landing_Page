@@ -28,9 +28,7 @@ function addMenu (text,idString) {
     newA.addEventListener("click", (e) => {
         e.preventDefault();
         sectionId = document.getElementById(idString);
-        console.log(sectionId);
         let yPos = sectionId.getBoundingClientRect().top + window.pageYOffset;
-        console.log(yPos);
         let scrollOptions = {
             top: yPos,
             behavior: 'smooth',
@@ -57,13 +55,16 @@ function buildNav () {
 
 buildNav();
 
-// Add class 'active' to section when near top of viewport
 
-
-
-// Scroll to anchor ID using scrollTO event
-
-// Set sections as active
+window.addEventListener("scroll", function () {
+    for (i = 0; i < sectionList.length; i++) {
+        if (sectionList[i].getBoundingClientRect().top <= window.innerHeight) {
+            sectionList[i].classList.add("your-active-class");
+        } else {
+            sectionList[i].classList.remove("your-active-class");
+        }
+    }
+});
 
 // Could not get this to work
 // function addElement (elementString, classString, textString, attribute) {
