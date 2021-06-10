@@ -11,24 +11,8 @@ console.log(navbarList);
 
 // Functions
 
-// Could not get this to work
-// function addElement (elementString, classString, textString, attribute) {
-//     console.log("I'm a function that creates elements!")
-//     let newEl = document.createElement(elementString);
-//     newEl.classList.add(classString);
-//     let newText = document.createTextNode(textString);
-//     newEl.appendChild(newText);
-//     newEl.setAttribute(attribute);
-
-// }
-
-
-
 function addMenu (text,idString) {
     // Create Elements and retreive the navbar_list element
-    // addElement("li", "menu__li");
-    // addElement("a","menu__link",text, attribute);
-
     let newLi = document.createElement("li");
     let newA = document.createElement("a");
     newA.classList.add("menu__link");
@@ -75,17 +59,19 @@ buildNav();
 
 // Add class 'active' to section when near top of viewport
 
+
+
 // Scroll to anchor ID using scrollTO event
 
-/**
- * End Main Functions
- * Begin Events
-
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
 // Set sections as active
+
+// Could not get this to work
+// function addElement (elementString, classString, textString, attribute) {
+//     console.log("I'm a function that creates elements!")
+//     let newEl = document.createElement(elementString);
+//     newEl.classList.add(classString);
+//     let newText = document.createTextNode(textString);
+//     newEl.appendChild(newText);
+//     newEl.setAttribute(attribute);
+
+// }
