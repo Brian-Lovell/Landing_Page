@@ -11,24 +11,39 @@ console.log(navbarList);
 
 // Functions
 
+// Could not get this to work
+// function addElement (elementString, classString, textString, attribute) {
+//     console.log("I'm a function that creates elements!")
+//     let newEl = document.createElement(elementString);
+//     newEl.classList.add(classString);
+//     let newText = document.createTextNode(textString);
+//     newEl.appendChild(newText);
+//     newEl.setAttribute(attribute);
 
-function addMenu (text,idstring) {
+// }
+
+
+
+function addMenu (text,idString) {
     // Create Elements and retreive the navbar_list element
+    // addElement("li", "menu__li");
+    // addElement("a","menu__link",text, attribute);
+
     let newLi = document.createElement("li");
     let newA = document.createElement("a");
-    let navContent = document.createTextNode(text);
+    newA.classList.add("menu__link");
 
     // Add the elements and add class names
-    newA.classList.add("menu__link");
+    let navContent = document.createTextNode(text);
     newA.appendChild(navContent);
     navbarList.appendChild(newLi, navbarList);
     newLi.appendChild(newA);
-    newA.setAttribute("href","#" + idstring);
+    newA.setAttribute("href","#" + idString);
 
     // Add event listener and scroll behavior
     newA.addEventListener("click", (e) => {
         e.preventDefault();
-        sectionId = document.getElementById(idstring);
+        sectionId = document.getElementById(idString);
         console.log(sectionId);
         let yPos = sectionId.getBoundingClientRect().top + window.pageYOffset;
         console.log(yPos);
