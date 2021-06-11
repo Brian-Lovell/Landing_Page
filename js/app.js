@@ -53,28 +53,20 @@ function buildNav () {
     }
 }
 
-buildNav();
-
-
-window.addEventListener("scroll", function () {
-    for (i = 0; i < sectionList.length; i++) {
-        let sectionY = sectionList[i].getBoundingClientRect().bottom;
-        let viewPortHeight = window.innerHeight;
-        if (sectionY <= viewPortHeight && sectionY >= 0) {
-            sectionList[i].classList.add("your-active-class");
-        } else {
-            sectionList[i].classList.remove("your-active-class");
+function changeActiveClass () {
+    window.addEventListener("scroll", function () {
+        for (i = 0; i < sectionList.length; i++) {
+            let sectionY = sectionList[i].getBoundingClientRect().bottom;
+            let viewPortHeight = window.innerHeight;
+            if (sectionY <= viewPortHeight && sectionY >= 0) {
+                sectionList[i].classList.add("your-active-class");
+            } else {
+                sectionList[i].classList.remove("your-active-class");
+            }
         }
-    }
-});
+    });
 
-// Could not get this to work
-// function addElement (elementString, classString, textString, attribute) {
-//     console.log("I'm a function that creates elements!")
-//     let newEl = document.createElement(elementString);
-//     newEl.classList.add(classString);
-//     let newText = document.createTextNode(textString);
-//     newEl.appendChild(newText);
-//     newEl.setAttribute(attribute);
+}
 
-// }
+buildNav();
+changeActiveClass();
