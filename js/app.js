@@ -1,13 +1,8 @@
-// File loaded
-console.log("Javascript file loaded");
-
 // Global Variables
  
 const sectionList = document.querySelectorAll('section');
-console.log(sectionList);
 
 let navbarList = document.getElementById("navbar__list");
-console.log(navbarList);
 
 // Functions
 
