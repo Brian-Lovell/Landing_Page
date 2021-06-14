@@ -2,7 +2,7 @@
 _JavaScript_ project that dynamically creates the section menu based on the sections in index.html!  We also mark active the section that is in view.
 
 ## Table of Contents
-- ### Variables
+- ### Global Variables
 - ### Functions
 
 
@@ -21,3 +21,14 @@ The addMenu function will create the HTML elements needed for the navigation men
 #### changeActiveClass
 
 This function will add an event listener for scrolling.  When a section is inside the view of the browser window that section will be marked active to apply different styling.
+
+#### Global Variables
+
+sectionList creates an HTML collection we can access to retreive information to generate the Menus.
+
+navbarList will allow us to access the menu.
+
+```
+const sectionList = document.querySelectorAll('section');
+let navbarList = document.getElementById("navbar__list");
+```
